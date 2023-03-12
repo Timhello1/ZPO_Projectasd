@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">My App</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Inżynieria Biomedyczna :)</string>
+    <string name="second_fragment_label">Inżynieria Biomedyczna :)</string>
+    <string name="login_button_text">Zaloguj</string>
+    <string name="previous">Powrót</string>
+
+    <string name="hello_first_fragment">SUPER APTEKA</string>
+    <string name="Username">Podaj login</string>
+    <string name="Password">Podaj hasło</string>
+    <string name="Password2">Podaj hasło jeszcze raz</string>
+    <string name="Buy">Zakupy</string>
+    <string name="Schedule">Terminarz</string>
+    <string name="Lokale">Spis lokalizacji</string>
+    <string name="Credits">Wiadomości o autorach</string>
+    <string name="Delete">Usun konto</string>
+    <string name="LogOut">Wyloguj</string>
+    <string name="AddProd">Dodaj Produkt</string>
+    <string name="ArrivalInfo">Powiadom o możliwości odbioru</string>
+    <string name="Storage">Wyświetl inwentarz</string>
+    <string name="AddLocal">Dodaj lokalizację</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="register_button_text">Rejestruj</string>
+    <string name="Email">Podaj Email</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
