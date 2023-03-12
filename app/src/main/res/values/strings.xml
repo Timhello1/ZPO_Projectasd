@@ -24,6 +24,10 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="register_button_text">Rejestruj</string>
     <string name="Email">Podaj Email</string>
+    <string name="MedName">Podaj nazwę leku</string>
+    <string name="MedPrice">Podaj cenę leku</string>
+    <string name="MedDescript">Podaj opis leku</string>
+    <string name="MedPresc">Czy lek wymaga recepty?</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

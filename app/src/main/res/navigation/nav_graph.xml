@@ -57,6 +57,9 @@
         <action
             android:id="@+id/action_fragmentAdminMenu_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_fragmentAdminMenu_to_fragmentAddProduct"
+            app:destination="@id/fragmentAddProduct" />
     </fragment>
     <fragment
         android:id="@+id/clientMenuFragment"
@@ -69,5 +72,14 @@
         <action
             android:id="@+id/action_clientMenuFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAddProduct"
+        android:name="com.example.myapp.FragmentAddProduct"
+        android:label="fragment_add_product"
+        tools:layout="@layout/fragment_add_product" >
+        <action
+            android:id="@+id/action_fragmentAddProduct_to_fragmentAdminMenu"
+            app:destination="@id/fragmentAdminMenu" />
     </fragment>
 </navigation>
