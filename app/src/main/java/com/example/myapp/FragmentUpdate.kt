@@ -11,13 +11,14 @@ import com.example.myapp.databinding.FragmentAddLocalBinding
 import com.example.myapp.databinding.FragmentAddProductBinding
 import com.example.myapp.databinding.FragmentClientMenuBinding
 import com.example.myapp.databinding.FragmentFirstBinding
+import com.example.myapp.databinding.FragmentUpdateBinding
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class FragmentAddLocal : Fragment() {
+class FragmentUpdate : Fragment() {
 
-    private var _binding: FragmentAddLocalBinding? = null
+    private var _binding: FragmentUpdateBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -28,7 +29,7 @@ class FragmentAddLocal : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentAddLocalBinding.inflate(inflater, container, false)
+        _binding = FragmentUpdateBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -36,13 +37,18 @@ class FragmentAddLocal : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonGoBack5.setOnClickListener {
-            findNavController().navigate(R.id.action_fragmentAddLocal_to_fragmentAdminMenu)
+        binding.buttonGoBack7.setOnClickListener {
+            findNavController().navigate(R.id.action_fragmentUpdate_to_fragmentAdminMenu)
         }
 
-        binding.buttonAddLocal2.setOnClickListener {
-            findNavController().navigate(R.id.action_fragmentAddLocal_to_fragmentAdminMenu)
-            Toast.makeText(requireContext(), "Lokal dodany", Toast.LENGTH_SHORT).show()
+        binding.buttonDeleteMed.setOnClickListener {
+            findNavController().navigate(R.id.action_fragmentUpdate_to_fragmentAdminMenu)
+            Toast.makeText(requireContext(), "Pozycja usunięta", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.buttonupdatehehe.setOnClickListener {
+            findNavController().navigate(R.id.action_fragmentUpdate_to_fragmentAdminMenu)
+            Toast.makeText(requireContext(), "Pozycja zaktualizowana", Toast.LENGTH_SHORT).show()
         }
 
     }

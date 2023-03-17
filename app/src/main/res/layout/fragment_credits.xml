@@ -2,11 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout10"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/screenBackground"
-    tools:context=".FragmentAddLocal">
+    tools:context=".CreditsFragment">
 
+    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/textview_first"
         android:layout_width="wrap_content"
@@ -23,59 +25,35 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.133" />
 
-    <EditText
-        android:id="@+id/TextName"
-        android:layout_width="213dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/PharName"
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="311dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="76dp"
+        android:text="@string/Author1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_first" />
 
-    <EditText
-        android:id="@+id/textadress"
-        android:layout_width="213dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="124dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/PharAdres"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_first" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName12"
-        android:layout_width="213dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="216dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/PharTime"
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="311dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="196dp"
+        android:text="@string/Author2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_first" />
 
     <Button
-        android:id="@+id/buttonGoBack5"
+        android:id="@+id/buttonGoBack10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
+        android:layout_marginBottom="140dp"
         android:text="@string/previous"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName12" />
-
-    <Button
-        android:id="@+id/buttonAddLocal2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="44dp"
-        android:text="@string/AddLocal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName12" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

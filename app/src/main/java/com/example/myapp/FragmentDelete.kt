@@ -5,16 +5,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.example.myapp.databinding.FragmentAddLocalBinding
+import com.example.myapp.databinding.FragmentAddProductBinding
 import com.example.myapp.databinding.FragmentClientMenuBinding
+import com.example.myapp.databinding.FragmentDeleteBinding
 import com.example.myapp.databinding.FragmentFirstBinding
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class ClientMenuFragment : Fragment() {
+class FragmentDelete : Fragment() {
 
-    private var _binding: FragmentClientMenuBinding? = null
+    private var _binding: FragmentDeleteBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,7 +29,7 @@ class ClientMenuFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentClientMenuBinding.inflate(inflater, container, false)
+        _binding = FragmentDeleteBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -33,12 +37,13 @@ class ClientMenuFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonGoBack2.setOnClickListener {
-            findNavController().navigate(R.id.action_clientMenuFragment_to_FirstFragment)
+        binding.buttonGoBack6.setOnClickListener {
+            findNavController().navigate(R.id.action_fragmentDelete_to_SecondFragment)
         }
 
-        binding.buttonDelete.setOnClickListener {
-            findNavController().navigate(R.id.action_clientMenuFragment_to_fragmentDelete)
+        binding.ButtonDelete.setOnClickListener {
+            findNavController().navigate(R.id.action_fragmentDelete_to_SecondFragment)
+            Toast.makeText(requireContext(), "Konto usunięte", Toast.LENGTH_SHORT).show()
         }
 
     }

@@ -60,6 +60,18 @@
         <action
             android:id="@+id/action_fragmentAdminMenu_to_fragmentAddProduct"
             app:destination="@id/fragmentAddProduct" />
+        <action
+            android:id="@+id/action_fragmentAdminMenu_to_fragmentAddLocal"
+            app:destination="@id/fragmentAddLocal" />
+        <action
+            android:id="@+id/action_fragmentAdminMenu_to_fragmentDelete"
+            app:destination="@id/fragmentDelete" />
+        <action
+            android:id="@+id/action_fragmentAdminMenu_to_fragmentUpdate"
+            app:destination="@id/fragmentUpdate" />
+        <action
+            android:id="@+id/action_fragmentAdminMenu_to_fragmentNotif"
+            app:destination="@id/fragmentNotif" />
     </fragment>
     <fragment
         android:id="@+id/clientMenuFragment"
@@ -72,6 +84,9 @@
         <action
             android:id="@+id/action_clientMenuFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_clientMenuFragment_to_fragmentDelete"
+            app:destination="@id/fragmentDelete" />
     </fragment>
     <fragment
         android:id="@+id/fragmentAddProduct"
@@ -81,5 +96,62 @@
         <action
             android:id="@+id/action_fragmentAddProduct_to_fragmentAdminMenu"
             app:destination="@id/fragmentAdminMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAddLocal"
+        android:name="com.example.myapp.FragmentAddLocal"
+        android:label="fragment_add_local"
+        tools:layout="@layout/fragment_add_local" >
+        <action
+            android:id="@+id/action_fragmentAddLocal_to_fragmentAdminMenu"
+            app:destination="@id/fragmentAdminMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentDelete"
+        android:name="com.example.myapp.FragmentDelete"
+        android:label="fragment_delete"
+        tools:layout="@layout/fragment_delete" >
+        <action
+            android:id="@+id/action_fragmentDelete_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentUpdate"
+        android:name="com.example.myapp.FragmentUpdate"
+        android:label="fragment_update"
+        tools:layout="@layout/fragment_update" >
+        <action
+            android:id="@+id/action_fragmentUpdate_to_fragmentAdminMenu"
+            app:destination="@id/fragmentAdminMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentNotif"
+        android:name="com.example.myapp.FragmentNotif"
+        android:label="fragment_notif"
+        tools:layout="@layout/fragment_notif" >
+        <action
+            android:id="@+id/action_fragmentNotif_to_fragmentAdminMenu"
+            app:destination="@id/fragmentAdminMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSettings"
+        android:name="com.example.myapp.FragmentSettings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_fragmentSettings_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_fragmentSettings_to_creditsFragment"
+            app:destination="@id/creditsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/creditsFragment"
+        android:name="com.example.myapp.CreditsFragment"
+        android:label="fragment_credits"
+        tools:layout="@layout/fragment_credits" >
+        <action
+            android:id="@+id/action_creditsFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>

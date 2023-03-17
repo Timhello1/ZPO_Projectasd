@@ -45,6 +45,22 @@ class FragmentAdminMenu : Fragment() {
         binding.buttonLogOut2.setOnClickListener {
             findNavController().navigate(R.id.action_fragmentAdminMenu_to_SecondFragment)
         }
+
+        binding.buttonArrival.setOnClickListener {
+            findNavController().navigate(R.id.action_fragmentAdminMenu_to_fragmentNotif)
+        }
+
+        binding.buttonAddLocal.setOnClickListener {
+            findNavController().navigate(R.id.action_fragmentAdminMenu_to_fragmentAddLocal)
+        }
+
+        binding.buttonupdate.setOnClickListener {
+            findNavController().navigate(R.id.action_fragmentAdminMenu_to_fragmentUpdate)
+        }
+
+        binding.buttonDelete2.setOnClickListener {
+            findNavController().navigate(R.id.action_fragmentAdminMenu_to_fragmentDelete)
+        }
     }
 
     override fun onDestroyView() {

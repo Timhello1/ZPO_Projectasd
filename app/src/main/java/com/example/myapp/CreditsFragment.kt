@@ -7,14 +7,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.myapp.databinding.FragmentClientMenuBinding
+import com.example.myapp.databinding.FragmentCreditsBinding
 import com.example.myapp.databinding.FragmentFirstBinding
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class ClientMenuFragment : Fragment() {
+class CreditsFragment : Fragment() {
 
-    private var _binding: FragmentClientMenuBinding? = null
+    private var _binding: FragmentCreditsBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,7 +26,7 @@ class ClientMenuFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentClientMenuBinding.inflate(inflater, container, false)
+        _binding = FragmentCreditsBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -33,12 +34,8 @@ class ClientMenuFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonGoBack2.setOnClickListener {
-            findNavController().navigate(R.id.action_clientMenuFragment_to_FirstFragment)
-        }
-
-        binding.buttonDelete.setOnClickListener {
-            findNavController().navigate(R.id.action_clientMenuFragment_to_fragmentDelete)
+        binding.buttonGoBack10.setOnClickListener {
+            findNavController().navigate(R.id.action_creditsFragment_to_FirstFragment)
         }
 
     }

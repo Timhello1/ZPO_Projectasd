@@ -5,16 +5,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.example.myapp.databinding.FragmentAddLocalBinding
+import com.example.myapp.databinding.FragmentAddProductBinding
 import com.example.myapp.databinding.FragmentClientMenuBinding
 import com.example.myapp.databinding.FragmentFirstBinding
+import com.example.myapp.databinding.FragmentNotifBinding
+import com.example.myapp.databinding.FragmentUpdateBinding
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
-class ClientMenuFragment : Fragment() {
+class FragmentNotif : Fragment() {
 
-    private var _binding: FragmentClientMenuBinding? = null
+    private var _binding: FragmentNotifBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,7 +30,7 @@ class ClientMenuFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentClientMenuBinding.inflate(inflater, container, false)
+        _binding = FragmentNotifBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -33,13 +38,14 @@ class ClientMenuFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonGoBack2.setOnClickListener {
-            findNavController().navigate(R.id.action_clientMenuFragment_to_FirstFragment)
-        }
+       binding.buttonGoBack8.setOnClickListener {
+           findNavController().navigate(R.id.action_fragmentNotif_to_fragmentAdminMenu)
+       }
 
-        binding.buttonDelete.setOnClickListener {
-            findNavController().navigate(R.id.action_clientMenuFragment_to_fragmentDelete)
-        }
+       binding.buttonNotif.setOnClickListener {
+           findNavController().navigate(R.id.action_fragmentNotif_to_fragmentAdminMenu)
+           Toast.makeText(requireContext(), "Powiadomienie wysłane", Toast.LENGTH_SHORT).show()
+       }
 
     }
 
