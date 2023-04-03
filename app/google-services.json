@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "22710137266",
+    "project_id": "pharmashop-88589",
+    "storage_bucket": "pharmashop-88589.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22710137266:android:d0ad5be7922062f186b4ab",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "22710137266-ojunhsp6l35s51nan8r6jcjci5j8soun.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIjSo4IPZayJaHE7LpM2nta0AmwIYhuu4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "22710137266-ojunhsp6l35s51nan8r6jcjci5j8soun.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
