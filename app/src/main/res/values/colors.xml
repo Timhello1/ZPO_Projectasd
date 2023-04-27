@@ -11,4 +11,9 @@
     <color name="colorPrimaryDark">#02D569   </color>
     <color name="colorAccent">#03DAC5</color>
     <color name="screenBackground">#33F9FF</color>
+
+
+
+    <color name="colorSnackBarSuccess">#03A9F4</color>
+    <color name="colorSnackBarError">#EB1B63</color>
 </resources>

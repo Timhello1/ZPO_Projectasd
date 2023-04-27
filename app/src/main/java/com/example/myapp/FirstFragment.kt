@@ -1,5 +1,6 @@
 package com.example.myapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -33,11 +34,13 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.loginButton.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+            val intent = Intent(context,LoginActivity::class.java)
+            startActivity(intent)
         }
 
         binding.registerButton.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_registerFragment  )
+            val intent = Intent(context,RegisterActivity::class.java)
+            startActivity(intent)
         }
     }
 

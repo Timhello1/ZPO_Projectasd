@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/screenBackground"
-    tools:context=".SecondFragment">
+    tools:context=".LoginActivity">
 
     <Button
         android:id="@+id/button_second"
@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.274" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/inputLogin"
         android:layout_width="216dp"
         android:layout_height="55dp"
         android:layout_marginTop="4dp"
@@ -48,17 +48,17 @@
         app:layout_constraintTop_toBottomOf="@+id/textview_first" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/inputPassword2"
         android:layout_width="219dp"
         android:layout_height="58dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="textPersonName|textWebPassword"
         android:text="@string/Password"
         app:layout_constraintBottom_toTopOf="@+id/button_second"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/inputLogin"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
@@ -66,17 +66,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/login_button_text"
-        app:layout_constraintBottom_toTopOf="@+id/registerButton2"
+        app:layout_constraintBottom_toTopOf="@+id/button_second"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/registerButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/register_button_text"
-        app:layout_constraintBottom_toTopOf="@+id/button_second"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:navGraph="@navigation/nav_graph"
+        app:defaultNavHost="true" />
 </androidx.constraintlayout.widget.ConstraintLayout>
