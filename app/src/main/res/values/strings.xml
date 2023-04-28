@@ -42,6 +42,7 @@
     <string name="DarkMode">Włącz tryb ciemny</string>
     <string name="LightMode">Włącz tryb jasny</string>
     <string name="OrderId">Podaj nr id zamówienia</string>
+    <string name="AdminPass">Admin pass</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <!-- Preference Titles -->
@@ -49,6 +50,7 @@
     <string name="sync_header">Sync</string>
     <string name="Author1">Monika Najdek</string>
     <string name="Author2">Tymoteusz Całka</string>
+
 
     <!-- Messages Preferences -->
     <string name="signature_title">Your signature</string>
@@ -62,4 +64,11 @@
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="title_activity_settings">SettingsActivity</string>
     <string name="next">Next</string>
+
+    <string name="err_msg_enter_email">Please enter your email</string>
+    <string name="err_msg_enter_login">Please enter your login</string>
+    <string name="err_msg_enter_name">Please enter your name</string>
+    <string name="err_msg_enter_password">Please enter your password</string>
+    <string name="err_msg_enter_reppassword">Please confirm your password</string>
+    <string name="err_msg_password_mismatch">Passwords mismatch</string>
 </resources>

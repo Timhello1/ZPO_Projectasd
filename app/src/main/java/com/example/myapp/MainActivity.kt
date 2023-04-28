@@ -25,7 +25,23 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        
+        val isLoginSuccessful = intent.getBooleanExtra("isLoginSuccessful", false)
+
+        if(isLoginSuccessful){
+            // Navigate to the desired fragment after a successful login
+            val navController = findNavController(R.id.nav_host_fragment_content_main)
+            navController.navigate(R.id.clientMenuFragment)
+        }
+
+        val imageId = intArrayOf(
+            R.drawable.ekamedica
+            )
+
+        val name = arrayOf(
+            "EkaMedica Czarny bez, płyn, 1000 ml"
+        )
+
+
 
         setSupportActionBar(binding.toolbar)
 
