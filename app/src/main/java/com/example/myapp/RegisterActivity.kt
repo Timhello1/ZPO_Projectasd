@@ -40,7 +40,7 @@ class RegisterActivity : BaseActivity() {
 
 
         registerButton?.setOnClickListener {
-            //validateRegisterDetails()
+            validateRegisterDetails()
             registerUser()
 
             val intent = Intent(this,LoginActivity::class.java)
