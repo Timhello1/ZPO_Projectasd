@@ -1,5 +1,5 @@
 package com.example.myapp
 
-class Admin {
-
-}
+data class Admin (
+    var email: String, var login: String, var password1: String, var password2: String
+)

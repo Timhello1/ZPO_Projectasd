@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         if(isLoginSuccessful){
             // Navigate to the desired fragment after a successful login
             val navController = findNavController(R.id.nav_host_fragment_content_main)
-            navController.navigate(R.id.clientMenuFragment)
+            navController.navigate(R.id.fragmentAdminMenu)
         }
 
         val imageId = intArrayOf(
