@@ -6,7 +6,7 @@
 
 android {
     namespace 'com.example.myapp'
-    compileSdk 33
+    compileSdk 32
 
     defaultConfig {
         applicationId "com.example.myapp"
@@ -72,6 +72,7 @@ dependencies {
 
 
     implementation platform('com.google.firebase:firebase-bom:30.4.1')
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.0'
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.6.1'
