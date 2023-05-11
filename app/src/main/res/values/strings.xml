@@ -29,6 +29,8 @@
     <string name="MedName">Podaj nazwę leku</string>
     <string name="MedPrice">Podaj cenę leku</string>
     <string name="MedDescript">Podaj opis leku</string>
+    <string name="MedIngredients">Podaj skład leku</string>
+    <string name="MedTags">Podaj tagi leku</string>
     <string name="MedPresc">Czy lek wymaga recepty?</string>
     <string name="PharName">Podaj nazwę lokalu</string>
     <string name="PharAdres">Podaj adres lokalu</string>

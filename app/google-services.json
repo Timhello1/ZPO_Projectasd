@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "22710137266",
+    "firebase_url": "https://pharmashop-88589-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "pharmashop-88589",
     "storage_bucket": "pharmashop-88589.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "22710137266-a6kr275f0rem2to6ffc1kt2su96v8al8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapp",
+            "certificate_hash": "c25d764fefbe8f7f4aa4390a46299087bdd4db5b"
+          }
+        },
         {
           "client_id": "22710137266-ojunhsp6l35s51nan8r6jcjci5j8soun.apps.googleusercontent.com",
           "client_type": 3
