@@ -1,7 +1,6 @@
 package com.example.myapp
 
 data class Product(
-    var name: String, var price: Double, var description: String, var prescription: Boolean,
-    var ingredients: String, var tags: String, var imageId: Int,
-
-)
+    var description: String, val imageId: Int, var ingredients: String,
+    var name: String, var prescription: Boolean,var price: String,
+    val sellerId: String,var tags: String)
