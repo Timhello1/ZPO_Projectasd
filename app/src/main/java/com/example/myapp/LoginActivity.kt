@@ -1,10 +1,12 @@
 package com.example.myapp
 
 import android.annotation.SuppressLint
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.content.res.Resources
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
@@ -19,6 +21,9 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import com.example.myapp.databinding.FragmentLoginBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.Query
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 
 /**
@@ -99,19 +104,49 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
                 .addOnCompleteListener{task ->
 
                     if(task.isSuccessful){
-                        showErrorSnackBar("You are logged in successfully.", false)
-                        goToMainActivity(true)
-                        finish()
+                        val db = Firebase.firestore
+                        val adminsRef = db.collection("admins")
+                        val query: Query = adminsRef.whereEqualTo("email", email)
+                        query.get().addOnCompleteListener{task ->
+                            if(task.isSuccessful){
+                                for(documentSnapshot in task.result!!){
+                                    val admin = documentSnapshot.getString("email")
 
+                                    if(admin != null && admin.equals(email)){
+                                        Log.d(TAG, "User Exists")
+                                        Toast.makeText(this, "Username exists", Toast.LENGTH_SHORT).show()
+                                        showErrorSnackBar("You are logged in successfully.", false)
+                                        goToMainActivity(1)
+
+                                    }
+                                }
+                            }
+                        }
+                        val usersRef = db.collection("users")
+                        val query2: Query = usersRef.whereEqualTo("email",email)
+                        query2.get().addOnCompleteListener { task ->
+                            if(task.isSuccessful){
+                                for(documentSnapshot in task.result!!){
+                                    val user = documentSnapshot.getString("email")
+
+                                    if(user != null && user.equals(email)){
+                                        Log.d(TAG, "User Exists")
+                                        Toast.makeText(this, "Username exists", Toast.LENGTH_SHORT).show()
+                                        showErrorSnackBar("You are logged in successfully.", false)
+                                        goToMainActivity(2)
+
+                                    }
+                                }
+                            }
+                        }
                     } else{
                         showErrorSnackBar(task.exception!!.message.toString(),true)
-                        goToMainActivity(false)
                     }
                 }
         }
     }
 
-    open fun goToMainActivity(isLoginSuccessful: Boolean) {
+    open fun goToMainActivity(isLoginSuccessful: Int) {
 
         val user = FirebaseAuth.getInstance().currentUser;
         val uid = user?.email.toString()
@@ -120,56 +155,8 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
         intent.putExtra("uID",uid)
         intent.putExtra("isLoginSuccessful", isLoginSuccessful)
         startActivity(intent)
-        finish()
+
     }
-//    private var _binding: FragmentLoginBinding? = null
-//
-//    // This property is only valid between onCreateView and
-//    // onDestroyView.
-//    private val binding get() = _binding!!
-//
-//    override fun onCreateView(
-//            inflater: LayoutInflater, container: ViewGroup?,
-//            savedInstanceState: Bundle?
-//    ): View? {
-//
-//        _binding = FragmentLoginBinding.inflate(inflater, container, false)
-//        return binding.root
-//
-//    }
-//
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//
-//        binding.buttonSecond.setOnClickListener {
-//            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
-//        }
-//
-//        binding.loginButton2.setOnClickListener {
-//            val username = view.findViewById<EditText>(R.id.inputLogin)
-//            val usernametext = username.text.toString()
-//            val password = view.findViewById<EditText>(R.id.inputPassword2)
-//            val passwordtext = password.text.toString()
-//            if(usernametext.equals("wiktor") && passwordtext.equals("politechnika")){
-//                Toast.makeText(requireContext(), "Dane prawidłowe", Toast.LENGTH_SHORT).show()
-//                findNavController().navigate(R.id.action_SecondFragment_to_fragmentAdminMenu)
-//            }else if(usernametext.equals("tymek")&& passwordtext.equals("politechnika")){
-//                Toast.makeText(requireContext(), "Dane prawidłowe", Toast.LENGTH_SHORT).show()
-//                findNavController().navigate(R.id.action_SecondFragment_to_clientMenuFragment)
-//            }
-//            else{
-//                Toast.makeText(requireContext(),"źle podane dane", Toast.LENGTH_SHORT).show()
-//            }
-//        }
-//
-//        binding.registerButton2.setOnClickListener {
-//            findNavController().navigate(R.id.action_SecondFragment_to_registerFragment)
-//        }
-//    }
-//
-//    override fun onDestroyView() {
-//        super.onDestroyView()
-//        _binding = null
-//    }
+
 
 }
