@@ -33,6 +33,10 @@ class ClientMenuFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.buttonShopping.setOnClickListener {
+            findNavController().navigate(R.id.action_clientMenuFragment_to_FragmentInventory)
+        }
+
         binding.buttonGoBack2.setOnClickListener {
             findNavController().navigate(R.id.action_clientMenuFragment_to_FirstFragment)
         }

@@ -22,7 +22,7 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginStart="20dp"
-                android:src="@drawable/ekamedica"/>
+                android:src="@drawable/drug"/>
 
 
                 <LinearLayout
@@ -36,7 +36,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/productName"
-                        android:text="EkaMedica Czarny bez, płyn, 1000 ml"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold"/>
@@ -45,8 +44,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/productHashtags"
-                        android:layout_marginTop="5dp"
-                        android:text="płyn, odchudzanie, odporność"/>
+                        android:layout_marginTop="5dp" />
 
                 </LinearLayout>
         </LinearLayout>
