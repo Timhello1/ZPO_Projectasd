@@ -1,8 +1,10 @@
 package com.example.myapp
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -10,6 +12,8 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 //private var _binding: FragmentRegisterBinding? = null
 
@@ -98,54 +102,65 @@ class RegisterActivity : BaseActivity() {
             finish()
         }
 
-
-//    override fun onCreateView(
-//        inflater: LayoutInflater, container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View? {
-//
-//        _binding = FragmentRegisterBinding.inflate(inflater, container, false)
-//        return binding.root
-//
-//    }
-//
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//
-//        binding.buttonGoBack.setOnClickListener{
-//            findNavController().navigate(R.id.action_registerFragment_to_FirstFragment)
-//        }
-//
-//        binding.buttonRegister2.setOnClickListener{
-//            findNavController().navigate(R.id.action_registerFragment_to_FirstFragment)
-//            Toast.makeText(requireContext(), "Konto zostało stworzone", Toast.LENGTH_SHORT).show()
-//        }
-//    }
-//
-//    override fun onDestroyView() {
-//        super.onDestroyView()
-//        _binding = null
-//    }
-
-
     private fun registerUser() {
         if (validateRegisterDetails()) {
-            val login: String = inputEmail?.text.toString().trim() { it <= ' ' }
+            val email: String = inputEmail?.text.toString().trim() { it <= ' ' }
             val password: String = inputPassword?.text.toString().trim() { it <= ' ' }
+            val pass: String = adminPass?.text.toString().trim() { it <= ' ' }
+            val login: String = inputName?.text.toString().trim() { it <= ' ' }
 
-            FirebaseAuth.getInstance().createUserWithEmailAndPassword(login, password)
+            FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(
                     OnCompleteListener<AuthResult> { task ->
                         if (task.isSuccessful) {
-                            val firebaseUser: FirebaseUser = task.result!!.user!!
-                            showErrorSnackBar(
-                                "You are registered successfully. Your user id is ${firebaseUser.uid}",
-                                false
-                            )
+                            if(pass.equals("pass")){
+                                val firebaseUser: FirebaseUser = task.result!!.user!!
+                                val db = Firebase.firestore
+                                val admin = hashMapOf(
+                                    "email" to email,
+                                    "password" to password,
+                                    "login" to login
+                                )
+                                db.collection("admins")
+                                    .add(admin)
+                                    .addOnSuccessListener { documentReference ->
+                                        Log.d(TAG, "DocumentSnapshot added with ID: \${documentReference.id")
+                                    }
+                                    .addOnFailureListener{ e ->
+                                        Log.w(TAG, "Error adding document", e)
+                                    }
+                                showErrorSnackBar(
+                                    "You are registered successfully. Your user id is ${firebaseUser.uid}",
+                                    false
+                                )
 
 
-                            FirebaseAuth.getInstance().signOut()
-                            finish()
+
+                            }else{
+                                val firebaseUser: FirebaseUser = task.result!!.user!!
+                                val db = Firebase.firestore
+                                val user = hashMapOf(
+                                    "email" to email,
+                                    "password" to password,
+                                    "login" to login
+                                )
+                                db.collection("users")
+                                    .add(user)
+                                    .addOnSuccessListener { documentReference ->
+                                        Log.d(TAG, "DocumentSnapshot added with ID: \${documentReference.id")
+                                    }
+                                    .addOnFailureListener{ e ->
+                                        Log.w(TAG, "Error adding document", e)
+                                    }
+                                showErrorSnackBar(
+                                    "You are registered successfully. Your user id is ${firebaseUser.uid}",
+                                    false
+                                )
+
+
+
+                            }
+
 
 
                         } else {
