@@ -32,6 +32,7 @@ class FragmentInventory : Fragment() {
 
     private lateinit var listView: ListView
     private lateinit var adapter: MyAdapter
+    private lateinit var valueEventListener: ValueEventListener
 
     private var _binding: FragmentInventoryBinding? = null
 
@@ -57,18 +58,18 @@ class FragmentInventory : Fragment() {
 
         val databaseReference = FirebaseDatabase.getInstance().getReference("products")
         // Pobierz listę snapshotów produktów z bazy danych
-        databaseReference.addValueEventListener(object : ValueEventListener {
+        valueEventListener = object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val snapshotList = snapshot.children.toList()
-                val adapter = MyAdapter(requireActivity(), snapshotList)
+                adapter = MyAdapter(requireActivity(), snapshotList)
                 listView.adapter = adapter
             }
 
             override fun onCancelled(databaseError: DatabaseError) {
                 Log.e(TAG, "onCancelled", databaseError.toException())
             }
-        })
-
+        }
+        databaseReference.addValueEventListener(valueEventListener)
     }
 
         
@@ -78,5 +79,7 @@ class FragmentInventory : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+        FirebaseDatabase.getInstance().getReference("products")
+            .removeEventListener(valueEventListener)
     }
 }
