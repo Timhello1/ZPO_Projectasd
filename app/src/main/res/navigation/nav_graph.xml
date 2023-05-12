@@ -20,9 +20,9 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.example.myapp.SecondFragment"
+        android:name="com.example.myapp.LoginActivity"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/fragment_login">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
@@ -39,7 +39,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.myapp.RegisterFragment"
+        android:name="com.example.myapp.RegisterActivity"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action
@@ -79,6 +79,9 @@
         android:label="fragment_client_menu"
         tools:layout="@layout/fragment_client_menu" >
         <action
+            android:id="@+id/action_clientMenuFragment_to_FragmentInventory"
+            app:destination="@id/FragmentInventory" />
+        <action
             android:id="@+id/action_clientMenuFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
         <action
@@ -87,6 +90,13 @@
         <action
             android:id="@+id/action_clientMenuFragment_to_fragmentDelete"
             app:destination="@id/fragmentDelete" />
+    </fragment>
+    <fragment
+        android:id="@+id/FragmentInventory"
+        android:name="com.example.myapp.FragmentInventory"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_inventory">
+
     </fragment>
     <fragment
         android:id="@+id/fragmentAddProduct"

@@ -13,6 +13,7 @@ import android.widget.Button
 import com.example.myapp.databinding.ActivityMainBinding
 
 import android.content.Intent
+import android.util.Log
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,7 +26,31 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        
+        val isLoginSuccessful = intent.getIntExtra("isLoginSuccessful", 0)
+
+        if(isLoginSuccessful == 1){
+            Log.d("MainActivity", "Navigating to fragmentAdminMenu")
+            // Navigate to the desired fragment after a successful login
+            val navController = findNavController(R.id.nav_host_fragment_content_main)
+            navController.navigate(R.id.fragmentAdminMenu)
+        }
+        else if(isLoginSuccessful == 2){
+            Log.d("MainActivity", "Navigating to clientMenuFragment")
+            val navController = findNavController(R.id.nav_host_fragment_content_main)
+            navController.navigate(R.id.clientMenuFragment)
+        }else{
+            Log.d("MainActivity", "Invalid value of isLoginSuccessful: $isLoginSuccessful")
+        }
+
+        val imageId = intArrayOf(
+            R.drawable.ekamedica
+            )
+
+        val name = arrayOf(
+            "EkaMedica Czarny bez, płyn, 1000 ml"
+        )
+
+
 
         setSupportActionBar(binding.toolbar)
 
