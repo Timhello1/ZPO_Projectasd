@@ -20,8 +20,8 @@ class MyAdapter(private val context: Activity, private val productList: List<Dat
 
         override fun onItemClick(parent: AdapterView<*>, view: View, position: Int, id: Long) {
             val selectedProductSnapshot = parent.getItemAtPosition(position) as DataSnapshot
-            val intent = Intent(context, ProductDetailsActivity::class.java)
-            intent.putExtra("product_id", selectedProductSnapshot.key)
+            val intent = Intent("com.example.ACTION_PRODUCT_DETAILS")
+            intent.putExtra("productId", selectedProductSnapshot.key)
             context.startActivity(intent)
         }
 

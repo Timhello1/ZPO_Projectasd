@@ -18,6 +18,7 @@
     <string name="Delete">Usun konto</string>
     <string name="LogOut">Wyloguj</string>
     <string name="AddProd">Dodaj Produkt</string>
+    <string name="AddProdToBasket">Dodaj Produkt do Koszyka</string>
     <string name="ArrivalInfo">Powiadom o możliwości odbioru</string>
     <string name="Storage">Wyświetl asortyment</string>
     <string name="Update">Zaktualizuj produkt</string>

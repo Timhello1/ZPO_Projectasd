@@ -74,7 +74,6 @@ class FragmentAddProduct : Fragment() {
             val drugPrescription = binding.isPrescription.isChecked
             val drugIngredients = binding.drugIngredients.text.toString()
             val drugTags = binding.drugTags.text.toString()
-            val imageId = 1
 
             mAuth = FirebaseAuth.getInstance()
             val userId = mAuth.currentUser?.uid.toString()
@@ -85,7 +84,6 @@ class FragmentAddProduct : Fragment() {
 
                 val product = mapOf(
                     "description" to drugDescription,
-                    "imageId" to imageId,
                     "sellerId" to userId,
                     "name" to drugName,
                     "prescription" to drugPrescription,
