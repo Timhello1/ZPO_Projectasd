@@ -1,4 +1,7 @@
 package com.example.myapp
 
-data class Local (
-    var address:String, var name: String, var timeOfDelivery: String )
+data class Local(
+    val name: String,
+    val address: String,
+    val time: String
+)

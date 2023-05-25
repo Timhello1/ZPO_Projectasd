@@ -44,6 +44,9 @@ class ClientMenuFragment : Fragment() {
         binding.buttonDelete.setOnClickListener {
             findNavController().navigate(R.id.action_clientMenuFragment_to_fragmentDelete)
         }
+        binding.buttonLocals.setOnClickListener {
+            findNavController().navigate(R.id.action_clientMenuFragment_to_fragmentDisplayLocals)
+        }
 
     }
 

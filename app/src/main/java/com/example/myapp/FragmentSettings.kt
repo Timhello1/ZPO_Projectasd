@@ -11,6 +11,7 @@ import com.example.myapp.databinding.FragmentFirstBinding
 import com.example.myapp.databinding.FragmentSettingsBinding
 
 import android.content.Intent
+import androidx.navigation.findNavController
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -37,7 +38,7 @@ class FragmentSettings : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonCredits.setOnClickListener {
-            findNavController().navigate(R.id.action_fragmentSettings_to_creditsFragment)
+
         }
 
         binding.buttonGoBack9.setOnClickListener {
