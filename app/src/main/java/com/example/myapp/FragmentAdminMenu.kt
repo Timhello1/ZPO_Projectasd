@@ -61,6 +61,7 @@ class FragmentAdminMenu : Fragment() {
         binding.buttonDelete2.setOnClickListener {
             findNavController().navigate(R.id.action_fragmentAdminMenu_to_fragmentDelete)
         }
+
     }
 
     override fun onDestroyView() {

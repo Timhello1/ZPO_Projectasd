@@ -72,6 +72,9 @@
         <action
             android:id="@+id/action_fragmentAdminMenu_to_fragmentNotif"
             app:destination="@id/fragmentNotif" />
+        <action
+            android:id="@+id/action_fragmentAdminMenu_to_FragmentInventory"
+            app:destination="@id/FragmentInventory" />
     </fragment>
     <fragment
         android:id="@+id/clientMenuFragment"
@@ -90,6 +93,9 @@
         <action
             android:id="@+id/action_clientMenuFragment_to_fragmentDelete"
             app:destination="@id/fragmentDelete" />
+        <action
+            android:id="@+id/action_clientMenuFragment_to_fragmentDisplayLocals"
+            app:destination="@id/fragmentDisplayLocals" />
     </fragment>
     <fragment
         android:id="@+id/FragmentInventory"
@@ -164,4 +170,8 @@
             android:id="@+id/action_creditsFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/fragmentDisplayLocals"
+        android:name="com.example.myapp.FragmentDisplayLocals"
+        android:label="FragmentDisplayLocals" />
 </navigation>

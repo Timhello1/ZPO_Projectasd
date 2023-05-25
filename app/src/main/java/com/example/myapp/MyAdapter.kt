@@ -8,7 +8,6 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.widget.TextView
-import com.bumptech.glide.Glide.init
 import com.example.myapp.Product
 import com.example.myapp.ProductDetailsActivity
 import com.example.myapp.R
