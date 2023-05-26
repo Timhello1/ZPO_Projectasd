@@ -18,7 +18,7 @@
         android:textAlignment="center"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName13"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -26,60 +26,60 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName13"
-        android:layout_width="213dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="411dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/MedId"
+        android:text="@string/MedName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_first" />
 
     <EditText
         android:id="@+id/editTextTextPersonName14"
-        android:layout_width="213dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="104dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/MedNameNew"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_first" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName15"
-        android:layout_width="213dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="176dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/MedPriceNew"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_first" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName16"
-        android:layout_width="213dp"
-        android:layout_height="61dp"
-        android:layout_marginTop="248dp"
+        android:layout_width="414dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/MedDescNew"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_first" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName13" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName15"
+        android:layout_width="407dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/MedIngredients"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName14" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName16"
+        android:layout_width="411dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/MedPrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName15" />
 
     <Switch
         android:id="@+id/switch2"
-        android:layout_width="207dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="205dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
         android:text="@string/MedPresc"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName16" />
 
@@ -87,33 +87,25 @@
         android:id="@+id/buttonGoBack7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="144dp"
         android:text="@string/previous"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switch2"
-        app:layout_constraintVertical_bias="0.502" />
+        app:layout_constraintTop_toBottomOf="@+id/switch2" />
 
     <Button
         android:id="@+id/buttonupdatehehe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="120dp"
         android:text="@string/Update"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switch2"
-        app:layout_constraintVertical_bias="0.502" />
-
-    <Button
-        android:id="@+id/buttonDeleteMed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="@string/MedDelete"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
