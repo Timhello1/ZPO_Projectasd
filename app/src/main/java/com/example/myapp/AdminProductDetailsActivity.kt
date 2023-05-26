@@ -92,6 +92,7 @@ class AdminProductDetailsActivity : AppCompatActivity() {
             }
         })
 
+
         buttonGoBackFromDetails.setOnClickListener { this.onBackPressed() }
         buttonDelete.setOnClickListener {
             // Usuń produkt z bazy danych
