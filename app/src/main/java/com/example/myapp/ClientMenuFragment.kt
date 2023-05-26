@@ -48,6 +48,11 @@ class ClientMenuFragment : Fragment() {
             findNavController().navigate(R.id.action_clientMenuFragment_to_fragmentDisplayLocals)
         }
 
+        binding.buttonShowBasket.setOnClickListener{
+            findNavController().navigate(R.id.action_clientMenuFragment_to_FragmentDisplayBasket)
+
+        }
+
     }
 
     override fun onDestroyView() {

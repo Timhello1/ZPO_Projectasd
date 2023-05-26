@@ -96,6 +96,9 @@
         <action
             android:id="@+id/action_clientMenuFragment_to_fragmentDisplayLocals"
             app:destination="@id/fragmentDisplayLocals" />
+        <action
+            android:id="@+id/action_clientMenuFragment_to_FragmentDisplayBasket"
+            app:destination="@id/fragmentDisplayBasket" />
     </fragment>
     <fragment
         android:id="@+id/FragmentInventory"
@@ -174,4 +177,8 @@
         android:id="@+id/fragmentDisplayLocals"
         android:name="com.example.myapp.FragmentDisplayLocals"
         android:label="FragmentDisplayLocals" />
+    <fragment
+        android:id="@+id/fragmentDisplayBasket"
+        android:name="com.example.myapp.FragmentDisplayBasket"
+        android:label="FragmentDisplayBasket" />
 </navigation>
