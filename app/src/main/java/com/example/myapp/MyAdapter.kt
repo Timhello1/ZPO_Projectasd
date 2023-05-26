@@ -27,23 +27,19 @@ class MyAdapter(private val context: Activity, private val productList: List<Dat
         /**
          * Metoda do ListView
          */
-        @SuppressLint("ViewHolder", "MissingInflatedId")
+        @SuppressLint("ViewHolder")
         override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
             val inflater: LayoutInflater = LayoutInflater.from(context)
             val view: View = inflater.inflate(R.layout.list_item, null)
             val name: TextView = view.findViewById(R.id.productName)
             val tags: TextView = view.findViewById(R.id.productHashtags)
-            val price: TextView = view.findViewById(R.id.productPrice)
-
 
             val productSnapshot = productList[position]
             val productName = productSnapshot.child("name").value as String?
             val productTags = productSnapshot.child("tags").value as String?
-            val productPrice = productSnapshot.child("price").value as String?
 
             name.text = productName ?: "Nazwa nieznana"
             tags.text = productTags ?: "Brak tagów"
-            price.text = "${productPrice} zł/szt" ?: "Cena nieznana"
 
             return view
         }
