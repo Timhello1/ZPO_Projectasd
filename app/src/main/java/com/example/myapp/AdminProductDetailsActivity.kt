@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.*
 
@@ -25,6 +26,7 @@ class AdminProductDetailsActivity : AppCompatActivity() {
         setContentView(R.layout.admin_product_details_activity)
 
         val buttonGoBackFromDetails = findViewById<Button>(R.id.buttonGoBackFromDetails)
+        val buttonDelete = findViewById<Button>(R.id.buttonAddToCart)
 
 
         productNameTextView = findViewById(R.id.product_name)
@@ -91,5 +93,20 @@ class AdminProductDetailsActivity : AppCompatActivity() {
         })
 
         buttonGoBackFromDetails.setOnClickListener { this.onBackPressed() }
+        buttonDelete.setOnClickListener {
+            // Usuń produkt z bazy danych
+            databaseReference.removeValue()
+                .addOnSuccessListener {
+                    // Wyświetl komunikat o powodzeniu usuwania
+                    Toast.makeText(this@AdminProductDetailsActivity, "Produkt został usunięty", Toast.LENGTH_SHORT).show()
+
+                    // Wróć do inwentarzu
+                    onBackPressed()
+                }
+                .addOnFailureListener {
+                    // Wyświetl komunikat o błędzie usuwania
+                    Toast.makeText(this@AdminProductDetailsActivity, "Błąd podczas usuwania produktu", Toast.LENGTH_SHORT).show()
+                }
+        }
     }
 }
