@@ -61,6 +61,16 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".AdminProductDetailsActivity"
+            android:exported="true"
+            android:label="AdminProductDetailsActivity"
+            android:theme="@style/Theme.MyApp.NoActionBar">
+            <intent-filter>
+                <action android:name="com.example.ACTION_ADMIN_PRODUCT_DETAILS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
