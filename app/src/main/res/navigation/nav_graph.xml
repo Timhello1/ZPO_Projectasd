@@ -180,5 +180,47 @@
     <fragment
         android:id="@+id/fragmentDisplayBasket"
         android:name="com.example.myapp.FragmentDisplayBasket"
-        android:label="FragmentDisplayBasket" />
+        android:label="FragmentDisplayBasket" >
+        <action
+            android:id="@+id/action_fragmentDisplayBasket_to_fragmentBasketChoices"
+            app:destination="@id/fragmentBasketChoices" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentBasketChoices"
+        android:name="com.example.myapp.FragmentBasketChoices"
+        android:label="fragment_basket_choices"
+        tools:layout="@layout/fragment_basket_choices" >
+        <action
+            android:id="@+id/action_fragmentBasketChoices_to_cardAddressFragment"
+            app:destination="@id/cardAddressFragment" />
+        <action
+            android:id="@+id/action_fragmentBasketChoices_to_cardShopFragment"
+            app:destination="@id/cardShopFragment" />
+        <action
+            android:id="@+id/action_fragmentBasketChoices_to_transferAddressFragment"
+            app:destination="@id/transferAddressFragment" />
+        <action
+            android:id="@+id/action_fragmentBasketChoices_to_transferShopFragment"
+            app:destination="@id/transferShopFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardAddressFragment"
+        android:name="com.example.myapp.CardAddressFragment"
+        android:label="fragment_card_address"
+        tools:layout="@layout/fragment_card_address" />
+    <fragment
+        android:id="@+id/cardShopFragment"
+        android:name="com.example.myapp.CardShopFragment"
+        android:label="fragment_card_shop"
+        tools:layout="@layout/fragment_card_shop" />
+    <fragment
+        android:id="@+id/transferAddressFragment"
+        android:name="com.example.myapp.TransferAddressFragment"
+        android:label="fragment_transfer_address"
+        tools:layout="@layout/fragment_transfer_address" />
+    <fragment
+        android:id="@+id/transferShopFragment"
+        android:name="com.example.myapp.TransferShopFragment"
+        android:label="fragment_transfer_shop"
+        tools:layout="@layout/fragment_transfer_shop" />
 </navigation>
