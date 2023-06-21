@@ -28,6 +28,15 @@
     <string name="register_button_text">Rejestruj</string>
     <string name="Email">Podaj Email</string>
     <string name="MedName">Podaj nazwę leku</string>
+    <string name="order">zamów</string>
+    <string name="karta">karta</string>
+    <string name="przelew">przelew</string>
+    <string name="adres">na adres</string>
+    <string name="sklep">do sklepu</string>
+    <string name="metoda_platnosci">Metoda płatności</string>
+    <string name="dostawa">Sposób dostawy</string>
+    <string name="usun">usun</string>
+    <string name="kup">kup</string>
     <string name="MedPrice">Podaj cenę leku</string>
     <string name="MedDescript">Podaj opis leku</string>
     <string name="MedIngredients">Podaj skład leku</string>
