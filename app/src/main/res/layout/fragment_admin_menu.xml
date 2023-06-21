@@ -5,101 +5,223 @@
     android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/screenBackground"
+    android:background="@drawable/gradient_background2"
     tools:context=".FragmentAdminMenu">
 
-    <Button
+<!--    <Button-->
+<!--        android:id="@+id/buttonupdate"-->
+<!--        android:layout_width="369dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_marginTop="240dp"-->
+<!--        android:text="@string/Update"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textview_first" />-->
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonupdate"
-        android:layout_width="369dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="240dp"
-        android:text="@string/Update"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_first" />
-
-    <Button
-        android:id="@+id/buttonDelete2"
-        android:layout_width="369dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="300dp"
-        android:text="@string/Delete"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_first" />
-
-    <Button
-        android:id="@+id/buttonLogOut2"
-        android:layout_width="369dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="360dp"
-        android:text="@string/LogOut"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_first" />
-
-    <TextView
-        android:id="@+id/textview_first"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="false"
-        android:fontFamily="cursive"
-        android:text="@string/hello_first_fragment"
-        android:textAlignment="center"
-        android:textSize="34sp"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_blue"
+        android:text="Zaktualizuj produkt"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.133" />
+        app:layout_constraintVertical_bias="0.07" />
 
-    <Button
+<!--    <Button-->
+<!--        android:id="@+id/buttonDelete2"-->
+<!--        android:layout_width="369dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_marginTop="300dp"-->
+<!--        android:text="@string/Delete"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textview_first" />-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonDelete2"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_blue"
+        android:text="Usuń konto"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
+
+<!--    <Button-->
+<!--        android:id="@+id/buttonLogOut2"-->
+<!--        android:layout_width="369dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_marginTop="360dp"-->
+<!--        android:text="@string/LogOut"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textview_first" />-->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonLogOut2"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_blue"
+        android:text="Wyloguj się"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.23" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/textview_first"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:clickable="false"-->
+<!--        android:fontFamily="cursive"-->
+<!--        android:text="@string/hello_first_fragment"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textSize="34sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.133" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/buttonAddProduct"-->
+<!--        android:layout_width="369dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:text="@string/AddProd"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textview_first" />-->
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonAddProduct"
-        android:layout_width="369dp"
-        android:layout_height="60dp"
-        android:text="@string/AddProd"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_blue"
+        android:text="Dodaj produkt"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_first" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.31" />
 
-    <Button
+<!--    <Button-->
+<!--        android:id="@+id/buttonArrival"-->
+<!--        android:layout_width="369dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        android:text="@string/ArrivalInfo"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textview_first" />-->
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonArrival"
-        android:layout_width="369dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="60dp"
-        android:text="@string/ArrivalInfo"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_blue"
+        android:text="Powiadom o możliwości odbioru"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_first" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39" />
 
-    <Button
+<!--    <Button-->
+<!--        android:id="@+id/buttonStorage"-->
+<!--        android:layout_width="369dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_marginTop="120dp"-->
+<!--        android:text="@string/Storage"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textview_first" />-->
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonStorage"
-        android:layout_width="369dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="120dp"
-        android:text="@string/Storage"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_blue"
+        android:text="Wyświetl asortyment"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_first" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47" />
 
-    <Button
+<!--    <Button-->
+<!--        android:id="@+id/buttonAddLocal"-->
+<!--        android:layout_width="369dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_marginTop="180dp"-->
+<!--        android:text="@string/AddLocal"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textview_first" />-->
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonAddLocal"
-        android:layout_width="369dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="180dp"
-        android:text="@string/AddLocal"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btn_blue"
+        android:text="Dodaj lokalizację apteki"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_first" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.55" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonGoBack3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="140dp"
+        android:background="@drawable/btn_blue"
         android:text="@string/previous"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonLogOut2" />
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
