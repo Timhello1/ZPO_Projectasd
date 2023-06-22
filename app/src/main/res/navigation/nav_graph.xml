@@ -217,7 +217,11 @@
         android:id="@+id/transferAddressFragment"
         android:name="com.example.myapp.TransferAddressFragment"
         android:label="fragment_transfer_address"
-        tools:layout="@layout/fragment_transfer_address" />
+        tools:layout="@layout/fragment_transfer_address" >
+        <action
+            android:id="@+id/action_transferAddressFragment_to_clientMenuFragment"
+            app:destination="@id/clientMenuFragment" />
+    </fragment>
     <fragment
         android:id="@+id/transferShopFragment"
         android:name="com.example.myapp.TransferShopFragment"
