@@ -32,6 +32,10 @@
     <string name="karta">karta</string>
     <string name="przelew">przelew</string>
     <string name="adres">na adres</string>
+    <string name="podaj_adres">podaj swoje miasto</string>
+    <string name="podaj_ulice">podaj swoją ulicę</string>
+    <string name="podaj_numer">podaj numer domu</string>
+    <string name="podaj_name">podaj imię i Nazwisko</string>
     <string name="sklep">do sklepu</string>
     <string name="metoda_platnosci">Metoda płatności</string>
     <string name="dostawa">Sposób dostawy</string>
