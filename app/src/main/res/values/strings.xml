@@ -7,7 +7,7 @@
     <string name="login_button_text">Zaloguj</string>
     <string name="previous">Powrót</string>
 
-    <string name="hello_first_fragment">PHARMASHOP</string>
+    <string name="hello_first_fragment">Witaj w Pharmashop</string>
     <string name="Username">Podaj login</string>
     <string name="Password">Podaj hasło</string>
     <string name="Password2">Podaj hasło jeszcze raz</string>
