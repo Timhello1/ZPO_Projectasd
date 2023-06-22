@@ -137,7 +137,7 @@ class TransferAddressFragment : Fragment() {
                 System.out.println(response.getStatus());
                 System.out.println(response.getData());
                 // Handle the response
-                saveOrderToFirestore(userEmail!!, orders)
+
             } catch (e: MailjetException) {
                 e.printStackTrace()
                 // Exception occurred while sending email
