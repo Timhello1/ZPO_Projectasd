@@ -1,5 +1,7 @@
 package com.example.myapp
 
+import android.app.UiModeManager
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,8 +11,9 @@ import androidx.navigation.fragment.findNavController
 import com.example.myapp.databinding.FragmentClientMenuBinding
 import com.example.myapp.databinding.FragmentFirstBinding
 import com.example.myapp.databinding.FragmentSettingsBinding
-
+import androidx.fragment.app.FragmentTransaction
 import android.content.Intent
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.navigation.findNavController
 
 /**
@@ -37,15 +40,34 @@ class FragmentSettings : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.buttonDarkMode.setOnClickListener {
+            setNightMode(true)
+        }
+
+        binding.buttonlightMode.setOnClickListener {
+            setNightMode(false)
+        }
+
         binding.buttonCredits.setOnClickListener {
-
+            val transaction = parentFragmentManager.beginTransaction()
+                .replace(R.id.settings_container, CreditsFragment())
+            transaction.addToBackStack(null)
+            transaction.commit()
         }
 
-        binding.buttonGoBack9.setOnClickListener {
-            val intent = Intent(context, MainActivity::class.java)
-            startActivity(intent)
-        }
 
+
+    }
+
+    private fun setNightMode(enabled: Boolean) {
+        val uiModeManager = requireContext().getSystemService(Context.UI_MODE_SERVICE) as UiModeManager
+        if (enabled) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            uiModeManager.nightMode = UiModeManager.MODE_NIGHT_YES
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            uiModeManager.nightMode = UiModeManager.MODE_NIGHT_NO
+        }
     }
 
     override fun onDestroyView() {
