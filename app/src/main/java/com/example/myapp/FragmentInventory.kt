@@ -34,7 +34,7 @@ class FragmentInventory : Fragment() {
     private lateinit var adapter: MyAdapter
     private lateinit var valueEventListener: ValueEventListener
 
-    private var _binding: FragmentInventoryBinding? = null
+    private var _binding: FragmentInventoryBinding ? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -70,6 +70,10 @@ class FragmentInventory : Fragment() {
             }
         }
         databaseReference.addValueEventListener(valueEventListener)
+
+        binding.buttonBackToMenu.setOnClickListener {
+            findNavController().navigate(R.id.action_fragmentInventory_to_ClientMenuFragment)
+        }
     }
 
         

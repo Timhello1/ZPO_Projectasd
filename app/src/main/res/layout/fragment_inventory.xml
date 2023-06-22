@@ -38,4 +38,23 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:listitem="@layout/list_item"  />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_back_to_menu"
+        android:layout_width="135dp"
+        android:layout_height="60dp"
+        android:background="@drawable/btn_blue"
+        android:text="Wróć"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.913" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
