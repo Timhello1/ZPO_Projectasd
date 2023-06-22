@@ -98,8 +98,10 @@
             app:destination="@id/fragmentDisplayLocals" />
         <action
             android:id="@+id/action_clientMenuFragment_to_FragmentDisplayBasket"
-            app:destination="@id/fragmentDisplayBasket"
-            />
+            app:destination="@id/fragmentDisplayBasket" />
+        <action
+            android:id="@+id/action_clientMenuFragment_to_schedule_Fragment"
+            app:destination="@id/schedule_Fragment" />
     </fragment>
     <fragment
         android:id="@+id/FragmentInventory"
@@ -184,5 +186,72 @@
     <fragment
         android:id="@+id/fragmentDisplayBasket"
         android:name="com.example.myapp.FragmentDisplayBasket"
-        android:label="FragmentDisplayBasket" />
+        android:label="FragmentDisplayBasket" >
+        <action
+            android:id="@+id/action_fragmentDisplayBasket_to_fragmentBasketChoices"
+            app:destination="@id/fragmentBasketChoices" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentBasketChoices"
+        android:name="com.example.myapp.FragmentBasketChoices"
+        android:label="fragment_basket_choices"
+        tools:layout="@layout/fragment_basket_choices" >
+        <action
+            android:id="@+id/action_fragmentBasketChoices_to_cardAddressFragment"
+            app:destination="@id/cardAddressFragment" />
+        <action
+            android:id="@+id/action_fragmentBasketChoices_to_cardShopFragment"
+            app:destination="@id/cardShopFragment" />
+        <action
+            android:id="@+id/action_fragmentBasketChoices_to_transferAddressFragment"
+            app:destination="@id/transferAddressFragment" />
+        <action
+            android:id="@+id/action_fragmentBasketChoices_to_transferShopFragment"
+            app:destination="@id/transferShopFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardAddressFragment"
+        android:name="com.example.myapp.CardAddressFragment"
+        android:label="fragment_card_address"
+        tools:layout="@layout/fragment_card_address" >
+        <action
+            android:id="@+id/action_cardAddressFragment_to_clientMenuFragment"
+            app:destination="@id/clientMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardShopFragment"
+        android:name="com.example.myapp.CardShopFragment"
+        android:label="fragment_card_shop"
+        tools:layout="@layout/fragment_card_shop" >
+        <action
+            android:id="@+id/action_cardShopFragment_to_clientMenuFragment"
+            app:destination="@id/clientMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transferAddressFragment"
+        android:name="com.example.myapp.TransferAddressFragment"
+        android:label="fragment_transfer_address"
+        tools:layout="@layout/fragment_transfer_address" >
+        <action
+            android:id="@+id/action_transferAddressFragment_to_clientMenuFragment"
+            app:destination="@id/clientMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transferShopFragment"
+        android:name="com.example.myapp.TransferShopFragment"
+        android:label="fragment_transfer_shop"
+        tools:layout="@layout/fragment_transfer_shop" >
+        <action
+            android:id="@+id/action_transferShopFragment_to_clientMenuFragment"
+            app:destination="@id/clientMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/schedule_Fragment"
+        android:name="com.example.myapp.Schedule_Fragment"
+        android:label="fragment_schedule_"
+        tools:layout="@layout/fragment_schedule_" >
+        <action
+            android:id="@+id/action_schedule_Fragment_to_clientMenuFragment"
+            app:destination="@id/clientMenuFragment" />
+    </fragment>
 </navigation>

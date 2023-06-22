@@ -62,10 +62,11 @@
 <!--        app:layout_constraintTop_toBottomOf="@+id/buttonShopping" />-->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonSchedule"
+        android:layout_marginStart="5dp"
+        android:text="Zamówienia do odbioru"
         android:layout_width="400dp"
         android:layout_height="60dp"
         android:background="@drawable/btn_blue"
-        android:text="Moje zamówienia"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="18dp"
