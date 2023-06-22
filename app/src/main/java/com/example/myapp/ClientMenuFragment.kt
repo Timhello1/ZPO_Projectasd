@@ -55,7 +55,9 @@ class ClientMenuFragment : Fragment() {
         binding.buttonSchedule.setOnClickListener {
             findNavController().navigate(R.id.action_clientMenuFragment_to_schedule_Fragment)
         }
-
+        binding.buttonLogOut.setOnClickListener {
+            findNavController().navigate(R.id.action_clientMenuFragment_to_FirstFragment)
+        }
     }
 
     override fun onDestroyView() {
