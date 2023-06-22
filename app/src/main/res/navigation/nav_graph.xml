@@ -98,13 +98,17 @@
             app:destination="@id/fragmentDisplayLocals" />
         <action
             android:id="@+id/action_clientMenuFragment_to_FragmentDisplayBasket"
-            app:destination="@id/fragmentDisplayBasket" />
+            app:destination="@id/fragmentDisplayBasket"
+            />
     </fragment>
     <fragment
         android:id="@+id/FragmentInventory"
         android:name="com.example.myapp.FragmentInventory"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_inventory">
+        <action
+            android:id="@+id/action_fragmentInventory_to_ClientMenuFragment"
+            app:destination="@id/clientMenuFragment" />
 
     </fragment>
     <fragment

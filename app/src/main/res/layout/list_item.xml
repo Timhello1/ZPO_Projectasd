@@ -23,7 +23,7 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginStart="20dp"
-                android:src="@drawable/drug"
+                android:src="@drawable/pill_blue"
                 app:civ_border_width="2dp"
                 app:civ_border_color="@color/colorPrimary" />
 
@@ -39,7 +39,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/productName"
-                        android:textColor="@color/black"
+                        android:textColor="#383e42"
                         android:textSize="20sp"
                         android:textStyle="bold"/>
 

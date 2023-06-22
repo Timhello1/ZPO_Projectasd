@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout8"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/screenBackground"
+    android:background="@drawable/gradient_background2"
     tools:context=".FragmentInventory">
 
     <TextView
@@ -13,28 +13,48 @@
         android:layout_width="368dp"
         android:layout_height="wrap_content"
         android:clickable="false"
-        android:fontFamily="cursive"
-        android:text="@string/hello_first_fragment"
+        android:text="Produkty"
         android:textAlignment="center"
-        android:textSize="34sp"
-        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.133" />
+        app:layout_constraintVertical_bias="0.1" />
 
     <ListView
         android:id="@+id/listView"
-        android:layout_width="425dp"
-        android:layout_height="0dp"
+        android:layout_width="300dp"
+        android:layout_height="450dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:scrollbars="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_first"
+        app:layout_constraintTop_toBottomOf="@id/textview_first"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:listitem="@layout/list_item"  />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_back_to_menu"
+        android:layout_width="135dp"
+        android:layout_height="60dp"
+        android:background="@drawable/btn_blue"
+        android:text="Wróć"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.913" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
