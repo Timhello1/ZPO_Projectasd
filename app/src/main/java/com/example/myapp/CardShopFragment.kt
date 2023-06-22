@@ -42,6 +42,7 @@ class CardShopFragment : Fragment() {
     private lateinit var editTextCVV: EditText
     private lateinit var editTextCard: EditText
     private lateinit var editTextExpiryDate: EditText
+    private val firestore: FirebaseFirestore = FirebaseFirestore.getInstance()
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -239,6 +240,7 @@ class CardShopFragment : Fragment() {
                 System.out.println(response.getStatus());
                 System.out.println(response.getData());
                 // Handle the response
+                saveOrderToFirestore(userEmail!!, orders)
             } catch (e: MailjetException) {
                 e.printStackTrace()
                 // Exception occurred while sending email
@@ -279,6 +281,31 @@ class CardShopFragment : Fragment() {
             }
             .addOnFailureListener { exception ->
                 // Obsłuż błąd pobierania danych
+            }
+    }
+    private fun saveOrderToFirestore(email: String, products: String) {
+        val orderData = hashMapOf(
+            "name" to email,
+            "products" to products
+        )
+
+        firestore.collection("orders")
+            .add(orderData)
+            .addOnSuccessListener { documentReference ->
+                val orderId = documentReference.id
+                // Update the orderId in the document with the generated document ID
+                firestore.collection("orders").document(orderId)
+                    .update("orderId", orderId)
+                    .addOnSuccessListener {
+                        // Document updated successfully
+                        // You can add any additional logic here
+                    }
+                    .addOnFailureListener { e ->
+                        // Handle the failure
+                    }
+            }
+            .addOnFailureListener { e ->
+                // Handle the failure
             }
     }
 

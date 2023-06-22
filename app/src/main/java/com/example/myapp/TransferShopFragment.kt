@@ -36,6 +36,7 @@ class TransferShopFragment : Fragment() {
     private var currentUserEmail: String? = null
     private lateinit var ordersRef: DatabaseReference
     private lateinit var productsRef: DatabaseReference
+    private val firestore: FirebaseFirestore = FirebaseFirestore.getInstance()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_transfer_shop, container, false)
@@ -161,6 +162,7 @@ class TransferShopFragment : Fragment() {
                 System.out.println(response.getStatus());
                 System.out.println(response.getData());
                 // Handle the response
+                saveOrderToFirestore(userEmail!!, orders)
             } catch (e: MailjetException) {
                 e.printStackTrace()
                 // Exception occurred while sending email
@@ -204,5 +206,30 @@ class TransferShopFragment : Fragment() {
             }
     }
 
+    private fun saveOrderToFirestore(email: String, products: String) {
+        val orderData = hashMapOf(
+            "name" to email,
+            "products" to products
+        )
+
+        firestore.collection("orders")
+            .add(orderData)
+            .addOnSuccessListener { documentReference ->
+                val orderId = documentReference.id
+                // Update the orderId in the document with the generated document ID
+                firestore.collection("orders").document(orderId)
+                    .update("orderId", orderId)
+                    .addOnSuccessListener {
+                        // Document updated successfully
+                        // You can add any additional logic here
+                    }
+                    .addOnFailureListener { e ->
+                        // Handle the failure
+                    }
+            }
+            .addOnFailureListener { e ->
+                // Handle the failure
+            }
+    }
 
 }
