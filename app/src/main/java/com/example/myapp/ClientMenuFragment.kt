@@ -52,6 +52,9 @@ class ClientMenuFragment : Fragment() {
             findNavController().navigate(R.id.action_clientMenuFragment_to_FragmentDisplayBasket)
 
         }
+        binding.buttonSchedule.setOnClickListener {
+            findNavController().navigate(R.id.action_clientMenuFragment_to_schedule_Fragment)
+        }
 
     }
 

@@ -99,6 +99,9 @@
         <action
             android:id="@+id/action_clientMenuFragment_to_FragmentDisplayBasket"
             app:destination="@id/fragmentDisplayBasket" />
+        <action
+            android:id="@+id/action_clientMenuFragment_to_schedule_Fragment"
+            app:destination="@id/schedule_Fragment" />
     </fragment>
     <fragment
         android:id="@+id/FragmentInventory"
@@ -237,6 +240,15 @@
         tools:layout="@layout/fragment_transfer_shop" >
         <action
             android:id="@+id/action_transferShopFragment_to_clientMenuFragment"
+            app:destination="@id/clientMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/schedule_Fragment"
+        android:name="com.example.myapp.Schedule_Fragment"
+        android:label="fragment_schedule_"
+        tools:layout="@layout/fragment_schedule_" >
+        <action
+            android:id="@+id/action_schedule_Fragment_to_clientMenuFragment"
             app:destination="@id/clientMenuFragment" />
     </fragment>
 </navigation>
