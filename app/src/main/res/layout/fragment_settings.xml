@@ -29,7 +29,7 @@
         android:layout_width="293dp"
         android:layout_height="57dp"
         android:layout_marginTop="40dp"
-        android:text="@string/DarkMode"
+        android:text="włącz tryb alternatywny"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +40,7 @@
         android:layout_width="293dp"
         android:layout_height="57dp"
         android:layout_marginTop="112dp"
-        android:text="@string/LightMode"
+        android:text="włącz tryb oryginalny"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_first" />
@@ -55,14 +55,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_first" />
 
-    <Button
-        android:id="@+id/buttonGoBack9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="68dp"
-        android:text="@string/previous"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -35,7 +35,10 @@ class CreditsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonGoBack10.setOnClickListener {
-            findNavController().navigate(R.id.action_creditsFragment_to_FirstFragment)
+            val transaction = parentFragmentManager.beginTransaction()
+                .replace(R.id.settings_container, FragmentSettings())
+            transaction.addToBackStack(null)
+            transaction.commit()
         }
 
     }
