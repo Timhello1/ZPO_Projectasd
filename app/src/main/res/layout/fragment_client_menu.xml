@@ -8,32 +8,7 @@
     android:background="@drawable/gradient_background2"
     tools:context=".ClientMenuFragment">
 
-<!--    <TextView-->
-<!--        android:id="@+id/textview_first"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:clickable="false"-->
-<!--        android:fontFamily="cursive"-->
-<!--        android:text="@string/hello_first_fragment"-->
-<!--        android:textAlignment="center"-->
-<!--        android:textSize="34sp"-->
-<!--        android:textStyle="bold"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.133" />-->
 
-<!--    <Button-->
-<!--        android:id="@+id/buttonShopping"-->
-<!--        android:layout_width="356dp"-->
-<!--        android:layout_height="70dp"-->
-<!--        android:layout_marginStart="5dp"-->
-<!--        android:layout_marginEnd="5dp"-->
-<!--        android:text="@string/Buy"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/textview_first" />-->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonShopping"
         android:layout_width="400dp"
@@ -51,15 +26,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.10" />
 
-<!--    <Button-->
-<!--        android:id="@+id/buttonSchedule"-->
-<!--        android:layout_width="362dp"-->
-<!--        android:layout_height="70dp"-->
-<!--        android:layout_marginStart="5dp"-->
-<!--        android:text="@string/Schedule"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/buttonShopping" />-->
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonSchedule"
         android:layout_marginStart="5dp"
@@ -78,15 +45,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.20" />
 
-<!--    <Button-->
-<!--        android:id="@+id/buttonLocals"-->
-<!--        android:layout_width="365dp"-->
-<!--        android:layout_height="54dp"-->
-<!--        android:layout_marginStart="5dp"-->
-<!--        android:text="@string/Lokale"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/buttonSchedule" />-->
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonLocals"
         android:layout_width="400dp"
@@ -104,15 +63,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.30" />
 
-<!--    <Button-->
-<!--        android:id="@+id/buttonShowBasket"-->
-<!--        android:layout_width="362dp"-->
-<!--        android:layout_height="50dp"-->
-<!--        android:layout_marginStart="5dp"-->
-<!--        android:text="@string/CheckBasket"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/buttonLocals" />-->
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonShowBasket"
@@ -130,15 +80,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.40" />
-<!--    <Button-->
-<!--        android:id="@+id/buttonDelete"-->
-<!--        android:layout_width="365dp"-->
-<!--        android:layout_height="50dp"-->
-<!--        android:layout_marginStart="5dp"-->
-<!--        android:text="@string/Delete"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/buttonShowBasket" />-->
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonDelete"
         android:layout_width="400dp"
@@ -156,15 +98,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.50" />
 
-<!--    <Button-->
-<!--        android:id="@+id/buttonLogOut"-->
-<!--        android:layout_width="362dp"-->
-<!--        android:layout_height="55dp"-->
-<!--        android:layout_marginStart="5dp"-->
-<!--        android:text="@string/LogOut"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/buttonDelete" />-->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonLogOut"
         android:layout_width="400dp"

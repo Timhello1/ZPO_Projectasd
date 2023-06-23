@@ -71,9 +71,7 @@ class FragmentInventory : Fragment() {
         }
         databaseReference.addValueEventListener(valueEventListener)
 
-        binding.buttonBackToMenu.setOnClickListener {
-            findNavController().navigate(R.id.action_fragmentInventory_to_ClientMenuFragment)
-        }
+
     }
 
         
