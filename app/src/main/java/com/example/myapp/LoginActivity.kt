@@ -14,6 +14,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -35,6 +36,7 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
     private var inputPassword: EditText? = null
     private var loginButton2: Button? = null
     private var goBackButton: Button? = null
+    private var resetPasswordTextView: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,6 +53,16 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
 
             logInRegisteredUser()
 
+        }
+
+        resetPasswordTextView = findViewById(R.id.textView)
+        resetPasswordTextView?.setOnClickListener {
+            val email = inputLogin?.text.toString().trim()
+            if (TextUtils.isEmpty(email)) {
+                showErrorSnackBar(resources.getString(R.string.err_msg_enter_login), true)
+            } else {
+                resetPassword(email)
+            }
         }
 
         goBackButton?.setOnClickListener {
@@ -156,6 +168,17 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
         intent.putExtra("isLoginSuccessful", isLoginSuccessful)
         startActivity(intent)
 
+    }
+
+    private fun resetPassword(email: String) {
+        FirebaseAuth.getInstance().sendPasswordResetEmail(email)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    showErrorSnackBar("Password reset email sent. Check your inbox.", false)
+                } else {
+                    showErrorSnackBar("Failed to send password reset email. ${task.exception?.message}", true)
+                }
+            }
     }
 
 
