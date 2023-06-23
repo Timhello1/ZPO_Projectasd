@@ -5,6 +5,7 @@
     android:id="@+id/frameLayout13"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background2"
     tools:context=".TransferShopFragment">
 
     <Spinner
@@ -16,13 +17,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/btn_blue"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         android:layout_marginStart="159dp"
         android:layout_marginBottom="324dp"
-        android:text="Button"
+        android:text="Zatwierdź"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

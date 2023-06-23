@@ -8,15 +8,6 @@
     android:background="@drawable/gradient_background2"
     tools:context=".FragmentAdminMenu">
 
-<!--    <Button-->
-<!--        android:id="@+id/buttonupdate"-->
-<!--        android:layout_width="369dp"-->
-<!--        android:layout_height="60dp"-->
-<!--        android:layout_marginTop="240dp"-->
-<!--        android:text="@string/Update"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/textview_first" />-->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonupdate"
         android:layout_width="400dp"
