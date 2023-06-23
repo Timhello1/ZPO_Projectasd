@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout10"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/screenBackground"
+    android:background="@drawable/gradient_background2"
     tools:context=".CreditsFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -45,10 +45,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_first" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonGoBack10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/btn_blue"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         android:layout_marginBottom="140dp"
         android:text="@string/previous"
         app:layout_constraintBottom_toBottomOf="parent"

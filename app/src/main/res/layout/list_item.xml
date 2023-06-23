@@ -57,20 +57,5 @@
 
                 </LinearLayout>
         </LinearLayout>
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:padding="15dp"-->
-<!--                android:layout_alignParentRight="true"-->
-<!--                android:layout_alignParentBottom="true"-->
-<!--                android:text="NOWOŚĆ"/>-->
-
-
-        
     </RelativeLayout>
-
-
-
-
-
 </LinearLayout>
