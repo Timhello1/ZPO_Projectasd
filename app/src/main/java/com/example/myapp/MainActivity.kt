@@ -59,8 +59,16 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "PharmaShop@gmail.com", Snackbar.LENGTH_LONG)
+            val emailIntent = Intent(Intent.ACTION_SEND)
+            emailIntent.type = "plain/text"
+            emailIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("PharmaShop212@gmail.com"))
+
+            try {
+                startActivity(Intent.createChooser(emailIntent, "Send email..."))
+            } catch (ex: android.content.ActivityNotFoundException) {
+                Snackbar.make(view, "No email app found", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
+            }
         }
     }
 
